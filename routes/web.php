@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('homepage');
 });
+
+Route::get('/chi-siamo', ['as' => 'chi-siamo', function () {
+    return view('chi-siamo');
+}]);
