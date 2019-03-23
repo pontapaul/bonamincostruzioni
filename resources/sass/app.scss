@@ -1,17 +1,12 @@
-
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=PT+Serif');
-
 // Variables
 @import 'variables';
-
 // UIkit
 @import 'uikit/src/scss/variables-theme.scss';
 @import 'uikit/src/scss/mixins-theme.scss';
-
 // Import UIkit.
 @import 'uikit/src/scss/uikit-theme.scss';
-
 @import 'header';
 @import 'homepage';
 @import 'about';

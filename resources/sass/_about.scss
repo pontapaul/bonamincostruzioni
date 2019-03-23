@@ -1,3 +1,37 @@
-html {
+.title {
+    & > * {
+        text-transform: uppercase;
+        letter-spacing: 1.3px;
+        font-style: italic;
+        font-size: 40px;
+    }
+}
 
+@media(min-width: $breakpoint-medium) {
+    #our-story {
+        position: absolute;
+        top: 30px;
+    }
+}
+
+.card-list {
+    .uk-card {
+        position: relative;
+
+        .uk-card-body {
+            z-index: 1;
+            color: #333;
+        }
+
+        &:nth-child(odd) .uk-card-body {
+            position: absolute;
+            right: 0;
+            z-index: 1;
+        }
+
+        &:nth-child(even) .uk-card-media-right {
+            position: absolute;
+            right: 0;
+        }
+    }
 }

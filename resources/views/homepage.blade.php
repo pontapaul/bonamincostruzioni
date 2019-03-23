@@ -1,5 +1,12 @@
 @extends('layout.layout')
 
+@section('header')
+    <div uk-sticky="top: #homepage-cover; cls-active: uk-navbar-sticky;" show-on-up animation="uk-animation-slide-top"
+         cls-inactive="uk-light uk-navbar-transparent no-shadow" sel-target=".uk-navbar-container">
+        @parent
+    </div>
+@stop
+
 @section('content')
 
     <div id="homepage-cover" class="uk-cover-container uk-light" uk-height-viewport>
@@ -69,9 +76,12 @@
     </div>
 
     <div class="uk-section uk-padding-remove-bottom">
-        <div class="uk-height-large uk-background-cover uk-light uk-flex" uk-parallax="bgy: -140" style="background-image: url('/images/bassano.jpg');">
-            <h1 class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">Amore per la propria cittá</h1>
-            <p class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical uk-padding" style="color:white">
+        <div class="uk-height-large uk-background-cover uk-light uk-flex" uk-parallax="bgy: -140"
+             style="background-image: url('/images/bassano.jpg');">
+            <h1 class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">Amore per la propria
+                cittá</h1>
+            <p class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical uk-padding"
+               style="color:white">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.

@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 <body>
-@include('layout.header')
+
+@section('header')
+    @include('layout.header')
+@show
 
 @yield('content')
 

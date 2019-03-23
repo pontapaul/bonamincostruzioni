@@ -4,6 +4,10 @@
     width: 100%;
     letter-spacing: 1.2px;
 
+    &:not(.no-shadow) {
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+    }
+
     &.uk-navbar-sticky {
         position: initial;
     }
@@ -12,6 +16,7 @@
         .uk-logo {
             text-transform: uppercase;
             line-height: 20px;
+
             img {
                 width: 35px;
             }
@@ -21,7 +26,15 @@
             }
 
             .costruzioni {
-                font-size:16.3px;
+                font-size: 16.3px;
+            }
+        }
+
+        .uk-navbar-nav .uk-active {
+            border-bottom: 5px solid $global-primary-background;
+
+            & > a {
+                color: $global-primary-background;
             }
         }
     }
