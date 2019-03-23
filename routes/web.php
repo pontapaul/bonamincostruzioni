@@ -18,3 +18,8 @@ Route::get('/', function () {
 Route::get('/chi-siamo', ['as' => 'chi-siamo', function () {
     return view('chi-siamo');
 }]);
+
+Route::get('/contatti', ['as' => 'contatti', function () {
+    return view('contatti');
+}]);
+
