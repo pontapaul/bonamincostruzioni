@@ -23,8 +23,8 @@
                             I nostri lavori
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li @if(request()->path() === 'contatti') class="uk-active" @endif>
+                        <a href="{{ route('contatti') }}">
                             Contatti
                         </a>
                     </li>
