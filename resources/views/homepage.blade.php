@@ -1,4 +1,4 @@
-@extends('layout.layout')
+@extends('layout.app')
 
 @section('header')
     <div uk-sticky="top: #homepage-cover; cls-active: uk-navbar-sticky;" show-on-up animation="uk-animation-slide-top"
