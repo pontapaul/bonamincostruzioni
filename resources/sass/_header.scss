@@ -13,23 +13,6 @@
     }
 
     .uk-navbar {
-        .uk-logo {
-            text-transform: uppercase;
-            line-height: 20px;
-
-            img {
-                width: 35px;
-            }
-
-            & > p > span {
-                display: block;
-            }
-
-            .costruzioni {
-                font-size: 16.3px;
-            }
-        }
-
         .uk-navbar-nav .uk-active {
             border-bottom: 5px solid $global-primary-background;
 
@@ -43,5 +26,56 @@
 .uk-light {
     .uk-logo {
         color: white;
+    }
+}
+
+.uk-logo {
+    text-transform: uppercase;
+    line-height: 20px;
+    letter-spacing: 1.2px;
+
+    img {
+        width: 35px;
+    }
+
+    & > p > span {
+        display: block;
+    }
+
+    .costruzioni {
+        font-size: 16.3px;
+    }
+}
+
+
+.mobile-navigation {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 1001;
+
+    & a {
+        font-size: 30px;
+        color: #ddd;
+    }
+    & .uk-logo img {
+        width: 60px;
+    }
+}
+
+@media(max-width: $breakpoint-medium - 1) {
+    body.no-scroll {
+        height: 100%;
+        overflow-y: hidden;
+
+        & .mobile-navigation {
+            display: flex;
+        }
     }
 }

@@ -1,5 +1,7 @@
 @extends('layout.app')
 
+@section('title') Contatti | @parent @stop
+
 @section('header')
     <div uk-sticky="cls-active: uk-navbar-sticky;" show-on-up animation="uk-animation-slide-top"
          cls-inactive="no-shadow" sel-target=".uk-navbar-container">
@@ -22,9 +24,9 @@
                     <strong>Bonamin Costruzioni srl</strong><br><br>
                     Via Don Lorenzo Perosi, 28 <br>
                     36061 Bassano del Grappa (VI) <br>
-                    Telefono: +39 0424 566461 <br>
-                    Fax: +39 0424 566461 <br>
-                    E-mail: info@bonamincostruzioni.it <br>
+                    Telefono: <a href="tel:+0424568612">+39 0424 568612</a><br>
+                    Fax: +39 0424 568612 <br>
+                    E-mail: <a href="mailto:info@bonamincostruzioni.it">info@bonamincostruzioni.it</a><br>
                 </p>
             </div>
         </div>

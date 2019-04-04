@@ -6,6 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@section('title') Bonamincostruzioni @show</title>
+    <meta name="description" content="Siamo specializzati in costruzioni civili, industriali e di restauro, nonché in manutenzioni ordinarie e straordinarie per ogni esigenza."/>
 
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>

@@ -7,13 +7,6 @@
     }
 }
 
-@media(min-width: $breakpoint-medium) {
-    #our-story {
-        position: absolute;
-        top: 30px;
-    }
-}
-
 .card-list {
     .uk-card {
         position: relative;
@@ -32,6 +25,36 @@
         &:nth-child(even) .uk-card-media-right {
             position: absolute;
             right: 0;
+        }
+    }
+}
+
+@media(min-width: $breakpoint-medium) {
+    #our-story {
+        position: absolute;
+        top: 30px;
+    }
+}
+
+
+@media(max-width: $breakpoint-medium - 1) {
+    .card-list {
+        .uk-card {
+            &:nth-child(odd) .uk-card-body {
+                position: static;
+            }
+
+            &:nth-child(even) .uk-card-media-right {
+                position: static;
+            }
+
+            &:nth-child(even) {
+                flex-direction: column-reverse;
+                & .uk-cover {
+                    position:static;
+                    transform: none;
+                }
+            }
         }
     }
 }

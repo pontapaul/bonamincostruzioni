@@ -1,5 +1,7 @@
 @extends('layout.app')
 
+@section('title') Chi siamo | @parent @stop
+
 @section('header')
     <div uk-sticky="cls-active: uk-navbar-sticky;" show-on-up animation="uk-animation-slide-top"
          cls-inactive="no-shadow" sel-target=".uk-navbar-container">
@@ -54,67 +56,81 @@
 
     <div class="uk-section uk-container uk-margin-large-bottom">
         <div class="uk-child-width-1-1 card-list" uk-grid>
-            <div class="uk-card" uk-grid>
-                <div class="uk-card-media-left uk-cover-container uk-width-3-4">
-                    <img src="/images/about-handshake.jpg" alt="" uk-cover>
-                    <canvas width="700" height="300"></canvas>
-                </div>
-                <div class="uk-card-body uk-width-1-2">
-                    <h3 class="uk-card-title uk-text-primary uk-text-uppercase">I nostri valori</h3>
-                    <p class="uk-text-justify">
-                        I valori su cui ci basiamo sono trasparenza e affidabilità per poter garantire al
-                        cliente un servizio sempre migliore. Il nostro intento primario è l&#39;attenzione verso la
-                        clientela, prima, durante e dopo la realizzazione dell&#39;opera, garantendo competenza,
-                        esperienza, professionalità e utilizzo di materiali di prima qualità.
-                    </p>
+            <div class="uk-card">
+                <div uk-grid>
+                    <div class="uk-card-media-left uk-cover-container uk-width-3-4@m">
+                        <img src="/images/about-handshake.jpg" alt="" uk-cover>
+                        <canvas width="700" height="300"></canvas>
+                    </div>
+                    <div class="uk-card-body uk-width-1-2@m">
+                        <h3 class="uk-card-title uk-text-primary uk-text-uppercase">I nostri valori</h3>
+                        <p class="uk-text-justify">
+                            I valori su cui ci basiamo sono trasparenza e affidabilità per poter garantire al
+                            cliente un servizio sempre migliore. Il nostro intento primario è l&#39;attenzione verso la
+                            clientela, prima, durante e dopo la realizzazione dell&#39;opera, garantendo competenza,
+                            esperienza, professionalità e utilizzo di materiali di prima qualità.
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <div class="uk-card" uk-grid>
-                <div class="uk-card-body uk-width-1-2">
-                    <h3 class="uk-card-title uk-text-primary uk-text-uppercase">La nostra crescita</h3>
-                    <p class="uk-text-justify">
-                        Investiamo da sempre per il miglioramento della produzione, la formazione e l&#39;aggiornamento
-                        dei collaboratori sia per gli aspetti tecnici che metodologici, nonché per la sicurezza dell&#39;ambiente
-                        di lavoro. <br> La nostra sensibilità verso l&#39;ambiente ci ha condotti passo dopo passo alla
-                        specializzazione nella ricerca e nell&#39;utilizzo di nuovi materiali per la bio-edilizia, di
-                        tecniche e tecnologie costruttive all&#39;avanguardia per il costante miglioramento degli isolamenti
-                        termici ed acustici negli edifici che realizziamo.
-                    </p>
-                </div>
-                <div class="uk-card-media-right uk-cover-container uk-width-3-4">
-                    <img src="/images/about-growth.jpg" alt="" uk-cover>
-                    <canvas width="700" height="300"></canvas>
-                </div>
-            </div>
-            <div class="uk-card" uk-grid>
-                <div class="uk-card-media-left uk-cover-container uk-width-3-4">
-                    <img src="/images/about2.jpg" alt="" uk-cover>
-                    <canvas width="700" height="300"></canvas>
-                </div>
-                <div class="uk-card-body uk-width-1-2">
-                    <h3 class="uk-card-title uk-text-primary uk-text-uppercase">Il nostro team</h3>
-                    <p class="uk-text-justify">
-                        Siamo a disposizione con un team giovane, ma altamente specializzato che opera quotidianamente
-                        con grandissima discrezione e professionalità, per rispondere nel miglior modo alle esigenze
-                        della clientela. Ci impegniamo a conoscere le esigenze del committente e percepirne per tempo le
-                        esigenze al fine di consegnare un prodotto di qualità che risponda alle aspettative.
-                    </p>
+            <div class="uk-card">
+                <div uk-grid>
+                    <div class="uk-card-body uk-width-1-2@m">
+                        <h3 class="uk-card-title uk-text-primary uk-text-uppercase">La nostra crescita</h3>
+                        <p class="uk-text-justify">
+                            Investiamo da sempre per il miglioramento della produzione, la formazione e l&#39;aggiornamento
+                            dei collaboratori sia per gli aspetti tecnici che metodologici, nonché per la sicurezza dell&#39;ambiente
+                            di lavoro. <br> La nostra sensibilità verso l&#39;ambiente ci ha condotti passo dopo passo
+                            alla
+                            specializzazione nella ricerca e nell&#39;utilizzo di nuovi materiali per la bio-edilizia,
+                            di
+                            tecniche e tecnologie costruttive all&#39;avanguardia per il costante miglioramento degli
+                            isolamenti
+                            termici ed acustici negli edifici che realizziamo.
+                        </p>
+                    </div>
+                    <div class="uk-card-media-right uk-cover-container uk-width-3-4@m">
+                        <img src="/images/about-growth.jpg" alt="" uk-cover>
+                        <canvas width="700" height="300"></canvas>
+                    </div>
                 </div>
             </div>
-            <div class="uk-card" uk-grid>
-                <div class="uk-card-body uk-width-1-2">
-                    <h3 class="uk-card-title uk-text-primary uk-text-uppercase">Il nostro impegno</h3>
-                    <p class="uk-text-justify">
-                        Operiamo costantemente per mettere in risalto la &quot;cultura del lavoro&quot; rispettando le
-                        condizioni contrattuali, la normativa vigente e favorendo la prevenzione. Ricerchiamo con
-                        continuità le soluzioni che consentono di essere all&#39;avanguardia in tutte le
-                        attività di impresa.
-                    </p>
+            <div class="uk-card">
+                <div uk-grid>
+                    <div class="uk-card-media-left uk-cover-container uk-width-3-4@m">
+                        <img src="/images/about2.jpg" alt="" uk-cover>
+                        <canvas width="700" height="300"></canvas>
+                    </div>
+                    <div class="uk-card-body uk-width-1-2@m">
+                        <h3 class="uk-card-title uk-text-primary uk-text-uppercase">Il nostro team</h3>
+                        <p class="uk-text-justify">
+                            Siamo a disposizione con un team giovane, ma altamente specializzato che opera
+                            quotidianamente
+                            con grandissima discrezione e professionalità, per rispondere nel miglior modo alle esigenze
+                            della clientela. Ci impegniamo a conoscere le esigenze del committente e percepirne per
+                            tempo le
+                            esigenze al fine di consegnare un prodotto di qualità che risponda alle aspettative.
+                        </p>
+                    </div>
                 </div>
-                <div class="uk-card-media-right uk-cover-container uk-width-3-4">
-                    <img src="/images/about-architect.jpg" alt="" uk-cover>
-                    <canvas width="700" height="300"></canvas>
+            </div>
+            <div class="uk-card">
+                <div uk-grid>
+                    <div class="uk-card-body uk-width-1-2@m">
+                        <h3 class="uk-card-title uk-text-primary uk-text-uppercase">Il nostro impegno</h3>
+                        <p class="uk-text-justify">
+                            Operiamo costantemente per mettere in risalto la &quot;cultura del lavoro&quot; rispettando
+                            le
+                            condizioni contrattuali, la normativa vigente e favorendo la prevenzione. Ricerchiamo con
+                            continuità le soluzioni che consentono di essere all&#39;avanguardia in tutte le
+                            attività di impresa.
+                        </p>
+                    </div>
+                    <div class="uk-card-media-right uk-cover-container uk-width-3-4@m">
+                        <img src="/images/about-architect.jpg" alt="" uk-cover>
+                        <canvas width="700" height="300"></canvas>
+                    </div>
                 </div>
             </div>
 

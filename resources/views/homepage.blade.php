@@ -13,15 +13,17 @@
         <img src="/images/main-home.jpg" alt="" uk-cover>
         <div class="uk-position-center uk-text-center">
             <h2 class="uk-margin-remove uk-text-uppercase">dal 1994</h2>
-            <h1 class="uk-text-uppercase">Bonamin costruzioni</h1>
+            <h1 class="uk-text-uppercase">Bonamin <span>costruzioni</span></h1>
             <h2 class="uk-text-uppercase">la vostra soluzione</h2>
         </div>
+        <a class="uk-position-bottom-center uk-margin-small-bottom" uk-icon="icon: chevron-down; ratio:2" href="#intro"
+           uk-scroll="duration: 1500; offset: 150"></a>
     </div>
 
 
-    <div class="uk-section uk-container uk-margin-large-top">
+    <div class="uk-section uk-container uk-margin-large-top" id="intro">
         <div uk-grid>
-            <div class="uk-width-2-5@m uk-text-center highlight uk-padding">
+            <div class="uk-width-2-5@m uk-text-center highlight">
                 <p class="subtitle uk-margin-remove">da sempre</p>
                 <p class="title uk-text-uppercase uk-margin-remove uk-text-primary">Professionalitá e Passione</p>
             </div>
@@ -45,49 +47,25 @@
 
     <div class="uk-section uk-container uk-margin-large-top">
         <p class="uk-text-large uk-text-primary uk-margin-bottom uk-text-center">I nostri lavori</p>
-        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@m uk-margin" uk-grid>
-            <div class="uk-card-media-left uk-cover-container">
-                <img src="images/home-case-1.jpg" alt="" uk-cover>
-                <canvas width="600" height="400"></canvas>
-            </div>
-            <div>
-                <div class="uk-card-body">
-                    <h3 class="uk-card-title">Cantiere1</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@m uk-margin" uk-grid>
-            <div class="uk-flex-last@s uk-card-media-right uk-cover-container">
-                <img src="images/home-case-2.jpg" alt="" uk-cover>
-                <canvas width="600" height="400"></canvas>
-            </div>
-            <div>
-                <div class="uk-card-body">
-                    <h3 class="uk-card-title">Cantiere2</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                </div>
-            </div>
-        </div>
+        @foreach($items as $index => $item)
+            @include('partials.case-card')
+        @endforeach
         <div class="uk-margin-top uk-text-center">
-            <a href="#" class="uk-button uk-button-primary">Vedi altri</a>
+            <a href="{{ route('lavori') }}" class="uk-button uk-button-primary">Vedi altri</a>
         </div>
     </div>
 
     <div class="uk-section uk-padding-remove-bottom">
-        <div class="uk-height-large uk-background-cover uk-light uk-flex" uk-parallax="bgy: -140"
+        <div class="uk-height-large uk-background-cover uk-light uk-flex uk-flex-middle uk-flex-center uk-padding-small" uk-parallax="bgy: -140"
              style="background-image: url('/images/bassano.jpg');">
-            <h1 class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">Amore per la propria
-                cittá</h1>
-            <p class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical uk-padding"
-               style="color:white">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-            </p>
+            <div class="highlight bassano">
+                <p class="title uk-text-center uk-margin-auto uk-margin-auto-vertical">
+                    Amore per la propria cittá
+                </p>
+                <p class="subtitle uk-text-center uk-margin-auto uk-margin-auto-vertical">
+                    Tenere alto il valore artistico di Bassano è un dovere
+                </p>
+            </div>
         </div>
     </div>
 @stop
