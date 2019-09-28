@@ -33,6 +33,12 @@ Route::get('/lavori', ['as' => 'lavori', function () {
     ]);
 }]);
 
+Route::get('/richiesta-inviata', ['as' => 'thank-you', function () {
+    return view('thank-you');
+}]);
+
+Route::post('contattaci', 'FrontendController@submitForm')->name('submit-form');
+
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');

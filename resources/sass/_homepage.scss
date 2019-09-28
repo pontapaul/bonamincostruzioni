@@ -51,9 +51,12 @@
 
 @media(max-width: $breakpoint-medium - 1) {
     #homepage-cover {
-        h1 span {
-            font-size: 50px;
-            letter-spacing: 4px;
+        h1 {
+            font-size: 52px;
+            & span {
+                font-size: 42px;
+                letter-spacing: 4px;
+            }
         }
 
         h2 {
@@ -63,11 +66,11 @@
 
     .highlight {
         .subtitle {
-            font-size: 25px;
+            font-size: 20px;
         }
 
         .title {
-            font-size: 40px;
+            font-size: 35px;
         }
     }
 }

@@ -3,27 +3,30 @@
     <div class="uk-container">
         <div uk-grid>
             <div class="uk-width-3-4@m">
-                <form>
+                <form action="{{ route('submit-form') }}" method="POST">
+                    {{ csrf_field() }}
                     <fieldset class="uk-fieldset">
 
                         <legend class="uk-legend">Domande? Contattaci!</legend>
 
                         <div class="uk-margin" uk-grid>
-                            <div class="uk-width-1-2"><input class="uk-input" type="text" placeholder="Nome"></div>
-                            <div class="uk-width-1-2"><input class="uk-input" type="text" placeholder="Cognome"></div>
+                            <div class="uk-width-1-2"><input class="uk-input" type="text" name="name" placeholder="Nome" required></div>
+                            <div class="uk-width-1-2"><input class="uk-input" type="text" name="surname" placeholder="Cognome" required></div>
                         </div>
 
                         <div class="uk-margin">
-                            <input class="uk-input" type="email" placeholder="Email">
+                            <input class="uk-input" type="email" name="email" placeholder="Email" required>
                         </div>
 
                         <div class="uk-margin">
-                            <textarea class="uk-textarea" rows="5" placeholder="Messaggio"></textarea>
+                            <textarea class="uk-textarea" rows="5" name="text" placeholder="Messaggio" required></textarea>
                         </div>
 
                         <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
-                            <label><input class="uk-checkbox" type="checkbox"> Acconensto al <a href="#">trattamento
-                                    della privacy</a></label>
+                            <label>
+                                <input class="uk-checkbox" name="privacy" type="checkbox" required>
+                                Acconensto al <a href="#">trattamento della privacy</a>
+                            </label>
                         </div>
 
                         <div class="uk-margin uk-text-right">

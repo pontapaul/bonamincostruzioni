@@ -45,15 +45,7 @@
             }
 
             &:nth-child(even) .uk-card-media-right {
-                position: static;
-            }
-
-            &:nth-child(even) {
-                flex-direction: column-reverse;
-                & .uk-cover {
-                    position:static;
-                    transform: none;
-                }
+                position: relative;
             }
         }
     }

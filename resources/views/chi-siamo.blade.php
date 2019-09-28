@@ -58,9 +58,11 @@
         <div class="uk-child-width-1-1 card-list" uk-grid>
             <div class="uk-card">
                 <div uk-grid>
-                    <div class="uk-card-media-left uk-cover-container uk-width-3-4@m">
-                        <img src="/images/about-handshake.jpg" alt="" uk-cover>
-                        <canvas width="700" height="300"></canvas>
+                    <div class="uk-width-3-4@m">
+                        <div class="uk-card-media-left uk-cover-container">
+                            <img src="/images/about-handshake.jpg" alt="" uk-cover>
+                            <canvas width="700" height="300"></canvas>
+                        </div>
                     </div>
                     <div class="uk-card-body uk-width-1-2@m">
                         <h3 class="uk-card-title uk-text-primary uk-text-uppercase">I nostri valori</h3>
@@ -76,6 +78,12 @@
 
             <div class="uk-card">
                 <div uk-grid>
+                    <div class="uk-width-3-4@m">
+                        <div class="uk-card-media-right uk-cover-container">
+                            <img src="/images/about-growth.jpg" alt="" uk-cover>
+                            <canvas width="700" height="300"></canvas>
+                        </div>
+                    </div>
                     <div class="uk-card-body uk-width-1-2@m">
                         <h3 class="uk-card-title uk-text-primary uk-text-uppercase">La nostra crescita</h3>
                         <p class="uk-text-justify">
@@ -90,17 +98,15 @@
                             termici ed acustici negli edifici che realizziamo.
                         </p>
                     </div>
-                    <div class="uk-card-media-right uk-cover-container uk-width-3-4@m">
-                        <img src="/images/about-growth.jpg" alt="" uk-cover>
-                        <canvas width="700" height="300"></canvas>
-                    </div>
                 </div>
             </div>
             <div class="uk-card">
                 <div uk-grid>
-                    <div class="uk-card-media-left uk-cover-container uk-width-3-4@m">
-                        <img src="/images/about2.jpg" alt="" uk-cover>
-                        <canvas width="700" height="300"></canvas>
+                    <div class="uk-width-3-4@m">
+                        <div class="uk-card-media-left uk-cover-container">
+                            <img src="/images/about2.jpg" alt="" uk-cover>
+                            <canvas width="700" height="300"></canvas>
+                        </div>
                     </div>
                     <div class="uk-card-body uk-width-1-2@m">
                         <h3 class="uk-card-title uk-text-primary uk-text-uppercase">Il nostro team</h3>
@@ -117,6 +123,12 @@
             </div>
             <div class="uk-card">
                 <div uk-grid>
+                    <div class="uk-width-3-4@m">
+                        <div class="uk-card-media-right uk-cover-container">
+                            <img src="/images/about-architect.jpg" alt="" uk-cover>
+                            <canvas width="700" height="300"></canvas>
+                        </div>
+                    </div>
                     <div class="uk-card-body uk-width-1-2@m">
                         <h3 class="uk-card-title uk-text-primary uk-text-uppercase">Il nostro impegno</h3>
                         <p class="uk-text-justify">
@@ -126,10 +138,6 @@
                             continuità le soluzioni che consentono di essere all&#39;avanguardia in tutte le
                             attività di impresa.
                         </p>
-                    </div>
-                    <div class="uk-card-media-right uk-cover-container uk-width-3-4@m">
-                        <img src="/images/about-architect.jpg" alt="" uk-cover>
-                        <canvas width="700" height="300"></canvas>
                     </div>
                 </div>
             </div>
