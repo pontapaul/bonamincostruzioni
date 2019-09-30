@@ -13,13 +13,11 @@
     <div class="uk-section uk-container uk-margin-auto">
         <h1 class="uk-margin-large-top uk-margin-large-bottom uk-text-center uk-text-uppercase uk-text-primary">Informazioni di contatto</h1>
         <div uk-grid>
-            <div class="uk-width-1-2@m">
-                <div class="uk-cover-container">
-                    <canvas width="600" height="450"></canvas>
-                    <img src="/images/contatti.jpg" alt="" uk-cover>
-                </div>
+            <div class="uk-width-1-2@s uk-text-right">
+                <img src="/images/contatti.jpg" alt="" width="300">
             </div>
-            <div class="uk-width-1-2@m">
+            <div class="uk-width-1-2@s">
+                <br class="uk-hidden@s">
                 <p class="uk-text-large uk-text-left@m uk-text-center">
                     <strong>Bonamin Costruzioni srl</strong><br><br>
                     Via Don Lorenzo Perosi, 28 <br>
