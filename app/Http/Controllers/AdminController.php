@@ -54,24 +54,24 @@ class AdminController extends Controller
         $thumbnail = Arr::pull($data, 'thumbnail');
         $gallery = Arr::pull($data, 'gallery');
 
-        $data['enabled'] = !! ($data['enabled'] ?? false);
-        $data['homepage'] = !! ($data['homepage'] ?? false);
+        $data['enabled'] = !!($data['enabled'] ?? false);
+        $data['homepage'] = !!($data['homepage'] ?? false);
 
         Arr::pull($data, '_token');
 
         try {
             $model = $model = $id ? CaseHistory::findOrFail($id)->fill($data) : new CaseHistory($data);
 
-            if($model->exists) {
-                if($thumbnail) {
+            if ($model->exists) {
+                if ($thumbnail) {
                     $model->clearMediaCollection('thumbnail');
                 }
-                if($gallery) {
+                if ($gallery) {
                     $model->clearMediaCollection('gallery');
                 }
             }
 
-            if($thumbnail) {
+            if ($thumbnail) {
                 $model->addMedia($thumbnail)->toMediaCollection('thumbnail');
             }
             if ($gallery) {
@@ -81,13 +81,23 @@ class AdminController extends Controller
             }
 
             $model->save();
-            session()->flash('success', true);
 
-            return redirect()->route('edit.case', ['id' => $model->getKey()]);
+            return redirect()->route('dashboard')->with('success', true);
         } catch (\Exception $e) {
-            session()->flash('success', false);
-
             return redirect()->back()->withInput();
         }
+    }
+
+    /**
+     * @param integer $id
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function delete($id)
+    {
+        $model = CaseHistory::findOrFail($id);
+
+        $model->delete();
+
+        return redirect()->back();
     }
 }

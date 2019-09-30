@@ -48,4 +48,6 @@ Route::prefix('admin')->group(function () {
 
     Route::get('/edit/{id?}', 'AdminController@showForm')->name('edit.case');
     Route::post('/edit/{id?}', 'AdminController@processForm');
+
+    Route::get('/delete/{id}', 'AdminController@delete')->name('delete.case');
 });

@@ -4,19 +4,6 @@
     <div class="uk-section uk-container-small uk-margin-auto">
         <div class="uk-margin-large-top">
             <h1 class="uk-text-center">Aggiungi/modifica lavoro</h1>
-            @if (! is_null($success = request()->get('success')))
-                @if ($success)
-                    <div class="uk-alert-success" uk-alert>
-                        <a class="uk-alert-close" uk-close></a>
-                        <p>Lavoro salvato con successo.</p>
-                    </div>
-                @else
-                    <div class="uk-alert-danger" uk-alert>
-                        <a class="uk-alert-close" uk-close></a>
-                        <p>C'è stato un errore durante il savaltaggio, ricotrolla i dati.</p>
-                    </div>
-                @endif
-            @endif
         </div>
         <div class="uk-flex-center" uk-grid>
             <div class="uk-width-3-4@m">
