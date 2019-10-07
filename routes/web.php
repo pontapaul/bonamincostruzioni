@@ -12,10 +12,12 @@
 */
 
 use App\CaseHistory;
+use App\IGFeed;
 
 Route::get('/', function () {
     return view('homepage', [
         'items' => CaseHistory::where('enabled', true)->where('homepage', true)->get(),
+        'pictures' => IGFeed::fetch(),
     ]);
 });
 

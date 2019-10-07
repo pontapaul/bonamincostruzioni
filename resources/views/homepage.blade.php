@@ -45,7 +45,39 @@
         </div>
     </div>
 
-    <div class="uk-section uk-container uk-margin-large-top">
+    <div class="uk-section uk-container uk-margin-top">
+        <p class="uk-text-large uk-text-primary uk-margin-bottom uk-text-center instagram-title">
+            Seguici su Instagram <a href="https://www.instagram.com/bonamincostruzionisrl/" target="_blank">@bonamincostruzionisrl</a> per le ultime dai nostri cantieri!
+        </p>
+        <div class="uk-grid uk-grid-collapse">
+            @foreach($pictures as $picture)
+                <div class="uk-width-1-4@m uk-width-1-3@s {{ $loop->last ? 'uk-hidden@m' : '' }} instagram-card uk-cover-container">
+                    <a href="{{ Arr::get($picture, 'link') }}" target="_blank">
+                        <div class="uk-light">
+                            @if(Arr::get($picture, 'type') == 'carousel')
+                                <div class="uk-position-top-right uk-margin-small-top uk-margin-small-right">
+                                    <span uk-icon="copy"></span>
+                                </div>
+                            @endif
+                            <div class="uk-position-center">
+                                <span uk-icon="heart"></span> {{ Arr::get($picture, 'likes.count') }}
+                                <span class="uk-margin-small-left" uk-icon="comments"></span> {{ Arr::get($picture, 'comments.count') }}
+                            </div>
+                        </div>
+                        <img src="{{ Arr::get($picture, 'images.low_resolution.url') }}" alt="{{ Arr::get($picture, 'link') }}">
+                    </a>
+                </div>
+            @endforeach
+        </div>
+    </div>
+
+    <div class="uk-flex uk-flex-center" uk-grid>
+        <div class="uk-width-1-2">
+            <hr class="uk-divider-icon">
+        </div>
+    </div>
+
+    <div class="uk-section uk-container uk-margin-top">
         <p class="uk-text-large uk-text-primary uk-margin-bottom uk-text-center">I nostri lavori</p>
         @foreach($items as $index => $item)
             @include('partials.case-card')

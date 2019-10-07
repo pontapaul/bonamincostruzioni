@@ -24,7 +24,7 @@
 
                         <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
                             <label>
-                                <input class="uk-checkbox" name="privacy" type="checkbox" required>
+                                <input class="uk-checkbox" name="privacy" type="checkbox" value="1" required>
                                 Acconsento al <a href="#">trattamento della privacy</a>
                             </label>
                         </div>

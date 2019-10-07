@@ -34,6 +34,7 @@ class Contact extends Mailable
             'address' => \Arr::get($this->data, 'email'),
             'name' => \Arr::get($this->data, 'name') . ' ' . \Arr::get($this->data, 'surname')
         ])
+            ->subject('Nuovo contatto dal sito bonamincostruzioni.it')
             ->view('emails.contatti')->with($this->data);
     }
 }
