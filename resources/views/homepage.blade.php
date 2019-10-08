@@ -21,8 +21,8 @@
     </div>
 
 
-    <div class="uk-section uk-container uk-margin-large-top" id="intro">
-        <div uk-grid>
+    <div class="uk-section uk-container uk-margin-top" id="intro">
+        <div class="uk-flex uk-flex-middle" uk-grid>
             <div class="uk-width-2-5@m uk-text-center highlight">
                 <p class="subtitle uk-margin-remove">da sempre</p>
                 <p class="title uk-text-uppercase uk-margin-remove uk-text-primary">Professionalitá e Passione</p>
@@ -51,7 +51,7 @@
         </p>
         <div class="uk-grid uk-grid-collapse">
             @foreach($pictures as $picture)
-                <div class="uk-width-1-4@m uk-width-1-3@s {{ $loop->last ? 'uk-hidden@m' : '' }} instagram-card uk-cover-container">
+                <div class="uk-width-1-4@m uk-width-1-3@s uk-width-1-2 {{ $loop->last ? 'uk-visible@s uk-hidden@m' : '' }} instagram-card uk-cover-container">
                     <a href="{{ Arr::get($picture, 'link') }}" target="_blank">
                         <div class="uk-light">
                             @if(Arr::get($picture, 'type') == 'carousel')

@@ -23,7 +23,6 @@
                     Via Don Lorenzo Perosi, 28 <br>
                     36061 Bassano del Grappa (VI) <br>
                     Telefono: <a href="tel:+0424568612">+39 0424 568612</a><br>
-                    Fax: +39 0424 568612 <br>
                     E-mail: <a href="mailto:info@bonamincostruzioni.it">info@bonamincostruzioni.it</a><br>
                 </p>
             </div>
